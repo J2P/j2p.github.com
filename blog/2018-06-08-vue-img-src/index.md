@@ -8,7 +8,6 @@ category: "Vue.js"
 tags: 
   - "JavaScript"
   - "Vue.js"
-description: ""  
 ---
 
 ## JavaScript 코드

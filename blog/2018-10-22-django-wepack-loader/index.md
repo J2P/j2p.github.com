@@ -8,7 +8,6 @@ category: "Webpack"
 tags: 
   - "Webpack"
   - "Django"
-description: ""  
 ---
 
 
