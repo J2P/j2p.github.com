@@ -10,8 +10,6 @@ tags:
 description: ""  
 ---
 
-![deno](./deno-small.png)
-
 ## Add deps to --info output ([#1720](https://github.com/denoland/deno/pull/1720))
 
 ### Deps type selection history

@@ -10,8 +10,6 @@ tags:
 description: ""  
 ---
 
-![Deno](./deno-logo.jpeg)
-
 ## Deno 기본 사용 방법
 ```
 $ deno script.ts

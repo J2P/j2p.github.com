@@ -19,4 +19,6 @@ export const color = {
   Blender: '#f5792a',
   Go: '#76e1fe',
   Disqus: '#2e9fff',
+  Deno: '#000000',
+  Jest: '#C21325',
 };

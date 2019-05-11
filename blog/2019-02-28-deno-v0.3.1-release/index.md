@@ -10,8 +10,6 @@ tags:
 description: ""  
 ---
 
-![deno](./deno-small.png)
-
 ## Add import.meta.main 
 - PR Link: [#1835](https://github.com/denoland/deno/pull/1835)
 - Issue Link: [#1834](https://github.com/denoland/deno/issues/1834)

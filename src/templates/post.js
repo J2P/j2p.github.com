@@ -148,6 +148,16 @@ const PostTitle = styled.div`
     color: #fff;
   }
 
+  &.Deno {
+    background-color: ${color.Deno};
+    color: #fff;
+  }
+
+  &.Jest {
+    background-color: ${color.Jest};
+    color: #fff;
+  }
+
   svg {
     fill: currentColor;
     width: 200px;

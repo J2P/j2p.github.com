@@ -4,9 +4,9 @@ date: "2018-02-08"
 layout: post
 draft: false
 path: "/posts/jest-matchers-1"
-category: "JavaScript"
+category: "Jest"
 tags: 
-  - "JavaScript"
+  - "Jest"
 description: ""  
 ---
 

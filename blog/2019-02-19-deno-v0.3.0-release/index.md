@@ -10,8 +10,6 @@ tags:
 description: ""  
 ---
 
-![deno](./deno-small.png)
-
 ## Add Deno global namespace object 
 - PR Link: [#1748](https://github.com/denoland/deno/pull/1748)
 - Issue Link: [#1705](https://github.com/denoland/deno/issues/1705)

@@ -4,9 +4,8 @@ date: "2018-06-19"
 layout: post
 draft: false
 path: "/posts/using-localstorage-in-jest"
-category: "JavaScript"
+category: "Jest"
 tags: 
-  - "JavaScript"
   - "Jest"
 description: ""  
 ---
