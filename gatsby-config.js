@@ -69,7 +69,9 @@ module.exports = {
         icon: 'src/favicon.png',
       },
     },
-    'gatsby-plugin-offline',
+    `gatsby-plugin-offline`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
