@@ -17,7 +17,7 @@ module.exports = {
   backgroundColor: '#2b2e3c',
 
   // Settings for typography.js
-  headerFontFamily: 'Bitter',
-  bodyFontFamily: 'Open Sans',
+  headerFontFamily: 'Montserrat',
+  bodyFontFamily: 'Montserrat',
   baseFontSize: '18px',
 };
