@@ -158,6 +158,11 @@ const PostTitle = styled.div`
     color: #fff;
   }
 
+  &.Terraform {
+    background-color: ${color.Terraform};
+    color: #fff;
+  }
+
   svg {
     fill: currentColor;
     width: 200px;

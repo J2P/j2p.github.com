@@ -21,4 +21,5 @@ export const color = {
   Disqus: '#2e9fff',
   Deno: '#000000',
   Jest: '#C21325',
+  Terraform: '#623CE4',
 };

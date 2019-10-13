@@ -71,8 +71,8 @@ const Contact = () => (
           <h2>경력</h2>
           <h3>(주) 당근마켓 <code className="language-text">2018.12.04 ~ </code></h3>
           <ul>
-            <li>웹뷰 작업 (신고하기), SPA로 전환하여 속도 향상, 반응성 개선</li>
-            <li>채팅 어드민 개발</li>
+            <li>기존 웹뷰를 SPA 방식으로 전환하여 속도 향상, 반응성 개선</li>
+            <li>사장님 메뉴 개발</li>
             <li>Vue.js</li>
           </ul>
           <h3>ODK Media <code className="language-text">2018.4.23 ~ 2018.11.30</code></h3>

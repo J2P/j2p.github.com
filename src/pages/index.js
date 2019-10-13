@@ -29,6 +29,10 @@ const Hero = styled.div`
   text-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
   color: ${props => props.theme.dark};
 
+  @media ${media.phone} {
+    padding: 3rem 2rem;
+  }
+
   p {
     font-size: 1.68rem;
     margin-top: -1rem;
@@ -42,6 +46,13 @@ const Hero = styled.div`
 
   a {
     background: none;
+  }
+
+  button {
+    @media ${media.phone} {
+      font-size: 0.6rem;
+      padding: 0.25rem 1rem;
+    }
   }
 `;
 

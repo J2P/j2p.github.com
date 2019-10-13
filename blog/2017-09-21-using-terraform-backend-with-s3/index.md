@@ -4,14 +4,11 @@ date: "2017-09-21"
 layout: post
 draft: false
 path: "/posts/using-terraform-backend-with-s3"
-category: "SRE"
+category: "Terraform"
 tags: 
-  - "terraform"
-  - "hashicorp"
+  - "Terraform"
 description: ""  
 ---
-
-![terraform](./terraform-color.png)
 
 ## configuration.tf 파일 생성
 
