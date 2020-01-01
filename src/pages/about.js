@@ -54,7 +54,7 @@ const Contact = () => (
       <div className="page">
         <h1 className="page__title">About me</h1>
         <div className="page__body">
-          <h1>정재필</h1>
+          <h1>Jung Jae PiL</h1>
           <h2>연락</h2>
           <ul> 
             <li>Email : jjp5023@gmail.com</li>
@@ -73,6 +73,9 @@ const Contact = () => (
           <ul>
             <li>기존 웹뷰를 SPA 방식으로 전환하여 속도 향상, 반응성 개선</li>
             <li>사장님 메뉴 개발</li>
+            <li>쿠폰 페이지 개발</li>
+            <li>업체 문의, 예약 페이지 개발</li>
+            <li>끌올 페이지 개발</li>
             <li>Vue.js</li>
           </ul>
           <h3>ODK Media <code className="language-text">2018.4.23 ~ 2018.11.30</code></h3>
@@ -127,28 +130,32 @@ const Contact = () => (
             <p>라이언달 발표를 보고 관심을 가지게 되어 간단한 PR을 보내기 시작 </p>
             <ul>
               <li>2018.09.04 ~ 현재</li>
-              <li>deno.readDir, deno.readDirSync API 추가</li>
+              <li>Rust, TypeScript</li>
+              <li>deno.readDir, deno.readDirSync API 구현</li>
               <li><a href="https://github.com/denoland/deno">https://github.com/denoland/deno</a></li>
             </ul>
-            <h3>개인 프로젝트 (Hanzai)</h3>
-            <p>한자 공부용 게임 제작 (한자 4급)</p>
+            <h3>Hanzai Game</h3>
+            <p>개인 프로젝트로</p>
+            <p>아이의 한자시험 공부를 도와주기 위해서 한자 공부용 게임 제작(한자 4급)</p>
             <ul>
               <li>React.js</li>
               <li><a href="https://github.com/J2P/play-hanzai">https://github.com/J2P/play-hanzai</a></li>
             </ul>
-            <h3>개인 프로젝트 (React Bingo Game)</h3>
+            <h3>React Bingo Game</h3>
+            <p>개인 프로젝트로</p>
             <p>아이들이 종이에 빙고 판을 그리고 게임을 하는것에서 아이디어를 얻어서 개인 프로젝트로 제작</p>
             <ul>
               <li>Node.js, Express, React.js, Socket.io</li>
               <li><a href="https://github.com/J2P/react-bingo">https://github.com/J2P/react-bingo</a></li>
               <li><a href="https://github.com/J2P/react-bingo-server">https://github.com/J2P/react-bingo-server</a></li>
             </ul>
-            <h3>Cappuccino framework 스터디 &amp; 졸업 작품 (Number Game)</h3>
+            <h3>Number Game</h3>
             <p>Cappuccino 프레임워크를 배우고 최종 작품을 제작</p>
             <ul>
+              <li>Cappuccino, Objective-J</li>
               <li><a href="https://github.com/J2P/number">https://github.com/J2P/number</a></li>
             </ul>
-            <h3>FRENDS 해카톤 (Typing Game)</h3>
+            <h3>Typing Game</h3>
             <p>FRENDS 커뮤니티에서 진행한 해카톤에서 한글과 컴퓨터의 소나기 타자게임을 웹으로 구현</p>
             <ul>
               <li>Node.js, Express, Passport Oauth, Bootstrap</li>
