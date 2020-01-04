@@ -35,7 +35,7 @@ var app = new Vue({
 <div id="app">
 	<div v-for="episode in episodes">
 		<img src={{ episode.thumbnail }}>
-		<p>{{ episode.description }</p>
+		<p>{{ episode.description }}</p>
 	</div>
 </div>
 ```
@@ -59,7 +59,7 @@ var app = new Vue({
 <div id="app">
 	<div v-for="episode in episodes">
 		<img :src="episode.thumbnail">
-		<p>{{ episode.description }</p>
+		<p>{{ episode.description }}</p>
 	</div>
 </div>
 ```

@@ -34,7 +34,10 @@ Octopress 에 대한 설명을 써주셨는데 Octopress 는 정적 사이트 �
 RVM 과 rbenv 요렇게 두가지다. 루비를 잘 모르므로 그나마 많이 들어 봤던 RVM 으로 설치를 진행했다.
 RVM 이 설치 되어 있다면 Ruby 설치 부터 진행하면 되지만 RVM 이 설치가 되있지 않다면 RVM 설치부터 진행 하면 된다.
 
-{% codeblock RVM 설치 lang:sh http://octopress.org/docs/setup/rvm/ Installing RVM %}
+
+RVM 설치
+
+``` bash
 $ bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)
 
 # curl 로 rvm 을 받는다.
@@ -46,33 +49,37 @@ $ echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" #Load RV
 $ source ~/.bash_profile
 
 # .bash_profil 파일 갱신
-
-{% endcodeblock %}
+```
 
 이제 RVM 으로 Ruby 를 설치하고 1.9.2 버전을 사용한다.
 
-{% codeblock Ruby Install %}
+Ruby Install
+``` bash
 $ rvm install 1.9.2 && rvm use 1.9.2
-{% endcodeblock %}
+```
 
 다음은 github 에 있는 octopress 를 clone 받는다.
-{% codeblock Clone Octopress lang:sh https://github.com/imathis/octopress github %}
+
+Clone Octopress
+``` bash
 $ git clone git://github.com/imathis/octopress.git octopress
 $ cd octopress
-{% endcodeblock %}
+```
 octopress 디렉토리에 처음 접근 할 RVM 으로 설치를 했을경우 .rvmrc 파일을 신뢰하는냐? 라고 물어본다.
 yes 라고 하면 된다.때
 
 다음은 의존성 설치이다.
 
-{% codeblock Install dependencies lang:sh %}
+Install dependencies
+``` bash
 $ gem install bundler
 $ bundle install
-{% endcodeblock %}
+```
 gem install bundler 할경우에 혹시 **“ERROR: LOADING COMMAND:INSTALL (LOADDEROR) ZLIB”** 라고 에러 메시지가 나온다면 zlib 가 없어서 그런듯하다.
 RVM 으로 Ruby 를 삭제하고 Ruby 설치 할때 옵션을 주면 된다.
 
-{% codeblock Ruby reinstall with option lang:sh %}
+Ruby reinstall with option
+``` bash
 $ rvm remove 1.9.2
 
 # Ruby 삭제
@@ -85,13 +92,14 @@ $ gem install bundler
 
 # 의존성 다시 설치
 
-{% endcodeblock %}
+```
 
 다음은 default Octopress theme 을 인스톨 한다.
 
-{% codeblock Octopress Default Theme Install lang:sh %}
+Octopress Default Theme Install
+```
 $ rake install
-{% endcodeblock %}
+```
 
 다음은 github 에 올리기 위한 설정이다.
 
@@ -99,19 +107,20 @@ github 의 계정에 가서 새로운 Repository 를 생성한다. Repository �
 
 계정이 생성 되었으면 Octopress 디렉토리에서 다음과 같은 명령어를 입력한다.
 
-{% codeblock Setup github lang:sh %}
+Setup github
+``` bash
 $ rake setup_github_pages
 
 # github url 을 물어보면 이전에 생성한 Repository 주소를 입력한다.
-
-{% endcodeblock %}
+```
 
 위와 같이 하면 github 와 연동이 된다.
 
 다음은 블로깅을 하기 위한 명령어 들이다.
 간단하게 3 가지 명령어 만으로 적용하고 미리보고 올리기 된다.
 
-{% codeblock 명령어 lang:sh %}
+명령어
+``` bash
 $ rake generate
 
 # 변경된 내용을 적용하고 html 을 생성
@@ -123,8 +132,7 @@ $ rake preview
 $ rake deploy
 
 # 변경된 내용을 github 에 push 해준다.
-
-{% endcodeblock %}
+```
 
 여기 까지 진행하면 http://username.github.com 에서 자신의 블로그가 생성된걸 확인 할 수 있다.
 
