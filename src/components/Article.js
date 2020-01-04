@@ -13,97 +13,126 @@ const Post = styled.article`
   margin-top: 3.5rem;
   margin-bottom: 3.5rem;
   border: 1px solid #ccc;
+  border-radius: 25px;
+  overflow: hidden;
+
+  @media ${media.phone} {
+    border-radius: 35px;
+  }
 
   &.ESLint {
-    border: 1px solid ${color.ESLint};
+    border: none;
+    box-shadow: 0 5px 50px ${color.ESLint};
   }
 
   &.React {
-    border: 1px solid ${color.React};
+    border: none;
+    box-shadow: 0 5px 50px ${color.React};
   }
 
   &.CSS3 {
-    border: 1px solid ${color.CSS3};
+    border: none;
+    box-shadow: 0 5px 50px ${color.CSS3};
   }
 
   &.Webpack {
-    border: 1px solid ${color.Webpack};
+    border: none;
+    box-shadow: 0 5px 50px ${color.Webpack};
   }
 
   &.Sass {
-    border: 1px solid ${color.Sass};
+    border: none;
+    box-shadow: 0 5px 50px ${color.Sass};
   }
 
   &.Rust {
-    border: 1px solid ${color.Rust};
+    border: none;
+    box-shadow: 0 5px 50px ${color.Rust};
   }
 
   &.JavaScript {
-    border: 1px solid ${color.JavaScript};
+    border: none;
+    box-shadow: 0 5px 50px ${color.JavaScript};
   }
 
   &.Git {
-    border: 1px solid ${color.Git};
+    border: none;
+    box-shadow: 0 5px 50px ${color.Git};
   }
 
   &.Django {
-    border: 1px solid ${color.Django};
+    border: none;
+    box-shadow: 0 5px 50px ${color.Django};
   }
 
   &.Java {
-    border: 1px solid ${color.Java};
+    border: none;
+    box-shadow: 0 5px 50px ${color.Java};
   }
 
   &.Node {
-    border: 1px solid ${color.Node};
+    border: none;
+    box-shadow: 0 5px 50px ${color.Node};
   }
 
   &.Vue {
-    border: 1px solid ${color.Vue};
+    border: none;
+    box-shadow: 0 5px 50px ${color.Vue};
   }
 
   &.Gatsby {
-    border: 1px solid ${color.Gatsby};
+    border: none;
+    box-shadow: 0 5px 50px ${color.Gatsby};
   }
 
   &.VisualStudioCode {
-    border: 1px solid ${color.VisualStudioCode};
+    border: none;
+    box-shadow: 0 5px 50px ${color.VisualStudioCode};
   }
 
   &.Elasticsearch {
-    border: 1px solid ${color.Elasticsearch};
+    border: none;
+    box-shadow: 0 5px 50px ${color.Elasticsearch};
   }
 
   &.PostgreSQL {
-    border: 1px solid ${color.PostgreSQL};
+    border: none;
+    box-shadow: 0 5px 50px ${color.PostgreSQL};
   }
 
   &.Python {
-    border: 1px solid ${color.Python};
+    border: none;
+    box-shadow: 0 5px 50px ${color.Python};
   }
 
   &.Blender {
-    border: 1px solid ${color.Blender};
+    border: none;
+    box-shadow: 0 5px 50px ${color.Blender};
   }
 
   &.Go {
-    border: 1px solid ${color.Go};
+    border: none;
+    box-shadow: 0 5px 50px ${color.Go};
   }
 
   &.Disqus {
-    border: 1px solid ${color.Disqus};
+    border: none;
+    box-shadow: 0 5px 50px ${color.Disqus};
   }
 
   &.Deno {
-    border: 1px solid ${color.Deno};
+    border: none;
+    box-shadow: 0 5px 50px ${color.Deno};
   }
 
   &.Jest {
-    border: 1px solid ${color.Jest};
+    border: none;
+    box-shadow: 0 5px 50px ${color.Jest};
   }
 
   &.Terraform {
-    border: 1px solid ${color.Terraform};
+    border: none;
+    box-shadow: 0 5px 50px ${color.Terraform};
   }
 `;
 
@@ -116,7 +145,7 @@ const Title = styled.h2`
 `;
 
 const Initiale = styled.div`
-  padding: 1rem 0;
+  padding: 1rem;
 
   background-color: #ccc;
 
@@ -354,7 +383,6 @@ const Content = styled.div`
   padding: 0 1rem;
 `;
 
-
 const Article = ({ title, date, excerpt, slug, timeToRead, category }) => {
   let className = category;
   if (category === 'Node.js' || category === 'Vue.js') {
@@ -363,12 +391,14 @@ const Article = ({ title, date, excerpt, slug, timeToRead, category }) => {
   if (category === 'Visual Studio Code') {
     className = category.replace(/ /gi, '');
   }
-  const icon = simpleIcons[category]
-    ? (<PostTitle className={className} dangerouslySetInnerHTML={{ __html: simpleIcons[category].svg }} />)
-    : '';
+  const icon = simpleIcons[category] ? (
+    <PostTitle className={className} dangerouslySetInnerHTML={{ __html: simpleIcons[category].svg }} />
+  ) : (
+    ''
+  );
 
   return (
-    <Post className={'article', className}>
+    <Post className={('article', className)}>
       <Title className="article-title">
         <Initiale className={className}>
           {icon}

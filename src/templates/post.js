@@ -34,12 +34,20 @@ const Content = styled.article`
 
 const Title = styled.h1`
   margin-bottom: 1rem;
+
+  @media ${media.phone} {
+    font-size: 2rem;
+  }
 `;
 
 const PostContent = styled.div`
   margin-top: 4rem;
   h2 {
     margin-top: 1.6rem;
+
+    @media ${media.phone} {
+      font-size: 1.5rem !important;
+    }
   }
 `;
 
@@ -166,6 +174,10 @@ const PostTitle = styled.div`
   svg {
     fill: currentColor;
     width: 200px;
+
+    @media ${media.phone} {
+      width: 100px;
+    }
   }
 `;
 
