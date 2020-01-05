@@ -15,124 +15,11 @@ const Post = styled.article`
   border: 1px solid #ccc;
   border-radius: 25px;
   overflow: hidden;
+  border: none;
+  box-shadow: 0 5px 50px ${props => color[props.icon] || 'rgba(0, 0, 0, 0.3)'};
 
   @media ${media.phone} {
     border-radius: 35px;
-  }
-
-  &.ESLint {
-    border: none;
-    box-shadow: 0 5px 50px ${color.ESLint};
-  }
-
-  &.React {
-    border: none;
-    box-shadow: 0 5px 50px ${color.React};
-  }
-
-  &.CSS3 {
-    border: none;
-    box-shadow: 0 5px 50px ${color.CSS3};
-  }
-
-  &.Webpack {
-    border: none;
-    box-shadow: 0 5px 50px ${color.Webpack};
-  }
-
-  &.Sass {
-    border: none;
-    box-shadow: 0 5px 50px ${color.Sass};
-  }
-
-  &.Rust {
-    border: none;
-    box-shadow: 0 5px 50px ${color.Rust};
-  }
-
-  &.JavaScript {
-    border: none;
-    box-shadow: 0 5px 50px ${color.JavaScript};
-  }
-
-  &.Git {
-    border: none;
-    box-shadow: 0 5px 50px ${color.Git};
-  }
-
-  &.Django {
-    border: none;
-    box-shadow: 0 5px 50px ${color.Django};
-  }
-
-  &.Java {
-    border: none;
-    box-shadow: 0 5px 50px ${color.Java};
-  }
-
-  &.Node {
-    border: none;
-    box-shadow: 0 5px 50px ${color.Node};
-  }
-
-  &.Vue {
-    border: none;
-    box-shadow: 0 5px 50px ${color.Vue};
-  }
-
-  &.Gatsby {
-    border: none;
-    box-shadow: 0 5px 50px ${color.Gatsby};
-  }
-
-  &.VisualStudioCode {
-    border: none;
-    box-shadow: 0 5px 50px ${color.VisualStudioCode};
-  }
-
-  &.Elasticsearch {
-    border: none;
-    box-shadow: 0 5px 50px ${color.Elasticsearch};
-  }
-
-  &.PostgreSQL {
-    border: none;
-    box-shadow: 0 5px 50px ${color.PostgreSQL};
-  }
-
-  &.Python {
-    border: none;
-    box-shadow: 0 5px 50px ${color.Python};
-  }
-
-  &.Blender {
-    border: none;
-    box-shadow: 0 5px 50px ${color.Blender};
-  }
-
-  &.Go {
-    border: none;
-    box-shadow: 0 5px 50px ${color.Go};
-  }
-
-  &.Disqus {
-    border: none;
-    box-shadow: 0 5px 50px ${color.Disqus};
-  }
-
-  &.Deno {
-    border: none;
-    box-shadow: 0 5px 50px ${color.Deno};
-  }
-
-  &.Jest {
-    border: none;
-    box-shadow: 0 5px 50px ${color.Jest};
-  }
-
-  &.Terraform {
-    border: none;
-    box-shadow: 0 5px 50px ${color.Terraform};
   }
 `;
 
@@ -146,103 +33,10 @@ const Title = styled.h2`
 
 const Initiale = styled.div`
   padding: 1rem;
-
-  background-color: #ccc;
+  background-color: ${props => color[props.icon] || '#ccc'};
 
   a {
     color: #fff;
-  }
-
-  &.ESLint {
-    background-color: ${color.ESLint};
-  }
-
-  &.React {
-    background-color: ${color.React};
-  }
-
-  &.CSS3 {
-    background-color: ${color.CSS3};
-  }
-
-  &.Webpack {
-    background-color: ${color.Webpack};
-  }
-
-  &.Sass {
-    background-color: ${color.Sass};
-  }
-
-  &.Rust {
-    background-color: ${color.Rust};
-  }
-
-  &.JavaScript {
-    background-color: ${color.JavaScript};
-  }
-
-  &.Git {
-    background-color: ${color.Git};
-  }
-
-  &.Django {
-    background-color: ${color.Django};
-  }
-
-  &.Java {
-    background-color: ${color.Java};
-  }
-
-  &.Node {
-    background-color: ${color.Node};
-  }
-
-  &.Vue {
-    background-color: ${color.Vue};
-  }
-
-  &.Gatsby {
-    background-color: ${color.Gatsby};
-  }
-
-  &.VisualStudioCode {
-    background-color: ${color.VisualStudioCode};
-  }
-
-  &.Elasticsearch {
-    background-color: ${color.Elasticsearch};
-  }
-
-  &.PostgreSQL {
-    background-color: ${color.PostgreSQL};
-  }
-
-  &.Python {
-    background-color: ${color.Python};
-  }
-
-  &.Blender {
-    background-color: ${color.Blender};
-  }
-
-  &.Go {
-    background-color: ${color.Go};
-  }
-
-  &.Disqus {
-    background-color: ${color.Disqus};
-  }
-
-  &.Deno {
-    background-color: ${color.Deno};
-  }
-
-  &.Jest {
-    background-color: ${color.Jest};
-  }
-
-  &.Terraform {
-    background-color: ${color.Terraform};
   }
 
   svg {
@@ -258,124 +52,11 @@ const Excerpt = styled.p`
 const PostTitle = styled.div`
   width: 100px;
   margin: 0 auto;
+  background-color: ${props => color[props.icon]};
+  color: #fff;
 
   @media ${media.phone} {
     width: 50px;
-  }
-
-  &.ESLint {
-    background-color: ${color.ESLint};
-    color: #fff;
-  }
-
-  &.React {
-    background-color: ${color.React};
-    color: #fff;
-  }
-
-  &.CSS3 {
-    background-color: ${color.CSS3};
-    color: #fff;
-  }
-
-  &.Webpack {
-    background-color: ${color.Webpack};
-    color: #fff;
-  }
-
-  &.Sass {
-    background-color: ${color.Sass};
-    color: #fff;
-  }
-
-  &.Rust {
-    background-color: ${color.Rust};
-    color: #fff;
-  }
-
-  &.JavaScript {
-    background-color: ${color.JavaScript};
-    color: #fff;
-  }
-
-  &.Git {
-    background-color: ${color.Git};
-    color: #fff;
-  }
-
-  &.Django {
-    background-color: ${color.Django};
-    color: #fff;
-  }
-
-  &.Java {
-    background-color: ${color.Java};
-    color: #fff;
-  }
-
-  &.Node {
-    background-color: ${color.Node};
-    color: #fff;
-  }
-
-  &.Vue {
-    background-color: ${color.Vue};
-    color: #fff;
-  }
-
-  &.Gatsby {
-    background-color: ${color.Gatsby};
-    color: #fff;
-  }
-
-  &.VisualStudioCode {
-    background-color: ${color.VisualStudioCode};
-    color: #fff;
-  }
-
-  &.Elasticsearch {
-    background-color: ${color.Elasticsearch};
-    color: #fff;
-  }
-
-  &.PostgreSQL {
-    background-color: ${color.PostgreSQL};
-    color: #fff;
-  }
-
-  &.Python {
-    background-color: ${color.Python};
-    color: #fff;
-  }
-
-  &.Blender {
-    background-color: ${color.Blender};
-    color: #fff;
-  }
-
-  &.Go {
-    background-color: ${color.Go};
-    color: #fff;
-  }
-
-  &.Disqus {
-    background-color: ${color.Disqus};
-    color: #fff;
-  }
-
-  &.Deno {
-    background-color: ${color.Deno};
-    color: #fff;
-  }
-
-  &.Jest {
-    background-color: ${color.Jest};
-    color: #fff;
-  }
-
-  &.Terraform {
-    background-color: ${color.Terraform};
-    color: #fff;
   }
 `;
 
@@ -392,15 +73,15 @@ const Article = ({ title, date, excerpt, slug, timeToRead, category }) => {
     className = category.replace(/ /gi, '');
   }
   const icon = simpleIcons[category] ? (
-    <PostTitle className={className} dangerouslySetInnerHTML={{ __html: simpleIcons[category].svg }} />
+    <PostTitle className={className} icon={className} dangerouslySetInnerHTML={{ __html: simpleIcons[category].svg }} />
   ) : (
     ''
   );
 
   return (
-    <Post className={('article', className)}>
+    <Post className={('article', className)} icon={className}>
       <Title className="article-title">
-        <Initiale className={className}>
+        <Initiale icon={className}>
           {icon}
           <Link to={slug}>{title}</Link>
         </Initiale>
