@@ -15,8 +15,7 @@ const Post = styled.article`
   border: 1px solid #ccc;
   border-radius: 25px;
   overflow: hidden;
-  border: none;
-  box-shadow: 0 5px 50px ${props => color[props.icon] || 'rgba(0, 0, 0, 0.3)'};
+  border: 1px solid ${props => color[props.icon] || '#ccc'};
 
   @media ${media.phone} {
     border-radius: 35px;
