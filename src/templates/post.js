@@ -55,124 +55,10 @@ const PostTitle = styled.div`
   width: 100%;
   padding: 50px 0;
   text-align: center;
-
-  &.ESLint {
-    background-color: ${color.ESLint};
-    color: #fff;
-  }
-
-  &.React {
-    background-color: ${color.React};
-    color: #fff;
-  }
-
-  &.CSS3 {
-    background-color: ${color.CSS3};
-    color: #fff;
-  }
-
-  &.Webpack {
-    background-color: ${color.Webpack};
-    color: #fff;
-  }
-
-  &.Sass {
-    background-color: ${color.Sass};
-    color: #fff;
-  }
-
-  &.Rust {
-    background-color: ${color.Rust};
-    color: #fff;
-  }
-
-  &.JavaScript {
-    background-color: ${color.JavaScript};
-    color: #fff;
-  }
-
-  &.Git {
-    background-color: ${color.Git};
-    color: #fff;
-  }
-
-  &.Django {
-    background-color: ${color.Django};
-    color: #fff;
-  }
-
-  &.Java {
-    background-color: ${color.Java};
-    color: #fff;
-  }
-
-  &.Node {
-    background-color: ${color.Node};
-    color: #fff;
-  }
-
-  &.Vue {
-    background-color: ${color.Vue};
-    color: #fff;
-  }
-
-  &.Gatsby {
-    background-color: ${color.Gatsby};
-    color: #fff;
-  }
-
-  &.VisualStudioCode {
-    background-color: ${color.VisualStudioCode};
-    color: #fff;
-  }
-
-  &.Elasticsearch {
-    background-color: ${color.Elasticsearch};
-    color: #fff;
-  }
-
-  &.PostgreSQL {
-    background-color: ${color.PostgreSQL};
-    color: #fff;
-  }
-
-  &.Python {
-    background-color: ${color.Python};
-    color: #fff;
-  }
-
-  &.Blender {
-    background-color: ${color.Blender};
-    color: #fff;
-  }
-
-  &.Go {
-    background-color: ${color.Go};
-    color: #fff;
-  }
-
-  &.Disqus {
-    background-color: ${color.Disqus};
-    color: #fff;
-  }
-
-  &.Deno {
-    background-color: ${color.Deno};
-    color: #fff;
-  }
-
-  &.Jest {
-    background-color: ${color.Jest};
-    color: #fff;
-  }
-
-  &.Terraform {
-    background-color: ${color.Terraform};
-    color: #fff;
-  }
+  background-color: ${props => color[props.icon] || '#ccc'};
 
   svg {
-    fill: currentColor;
+    fill: #ffffff;
     width: 200px;
 
     @media ${media.phone} {
@@ -185,16 +71,20 @@ const Post = props => {
   const { slug } = props.pageContext;
   const postNode = props.data.markdownRemark;
   const post = postNode.frontmatter;
+  const { category } = post;
   let className = post.category;
-  if (post.category === 'Node.js' || post.category === 'Vue.js') {
-    className = post.category.replace('.js', '');
+  if (category === 'Node.js' || category === 'Vue.js') {
+    className = category.replace('.js', '');
   }
-  if (post.category === 'Visual Studio Code') {
-    className = post.category.replace(/ /gi, '');
+  if (category === 'Visual Studio Code') {
+    className = category.replace(/ /gi, '');
   }
-  const icon = simpleIcons[post.category]
-    ? (<PostTitle className={className} dangerouslySetInnerHTML={{ __html: simpleIcons[post.category].svg }} />)
-    : '';
+
+  const icon = simpleIcons[category] ? (
+    <PostTitle className={className} icon={className} dangerouslySetInnerHTML={{ __html: simpleIcons[category].svg }} />
+  ) : (
+    ''
+  );
 
   return (
     <Layout>

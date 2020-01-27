@@ -22,4 +22,5 @@ export const color = {
   Deno: '#000000',
   Jest: '#C21325',
   Terraform: '#623CE4',
+  Storybook: '#FF4785',
 };

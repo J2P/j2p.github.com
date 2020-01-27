@@ -6,14 +6,8 @@ import { color } from '../utils/color';
 const Wrapper = styled.header`
   background: linear-gradient(
     45deg,
-    ${props => {
-      const color = props.color ? props.color : props.theme.dark;
-      return darken(0.1, color);
-    }},
-    ${props => {
-      const color = props.color ? props.color : props.theme.dark;
-      return lighten(0.1, color);
-    }}
+    ${props => darken(0.1, props.color ? props.color : props.theme.dark)},
+    ${props => lighten(0.1, props.color ? props.color : props.theme.dark)}
   );
   grid-column: 1 / -1;
   margin-left: -1rem;
@@ -35,12 +29,10 @@ const Content = styled.div`
   }
 `;
 
-const Header = props => {
-  return (
-    <Wrapper color={color[props.color]}>
-      <Content>{props.children}</Content>
-    </Wrapper>
-  );
-};
+const Header = props => (
+  <Wrapper color={color[props.color]}>
+    <Content>{props.children}</Content>
+  </Wrapper>
+);
 
 export default Header;

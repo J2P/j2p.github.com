@@ -4,7 +4,7 @@ date: "2019-02-23"
 layout: post
 draft: false
 path: "/posts/how-to-use-storybook-for-vue"
-category: "Vue.js"
+category: "Storybook"
 tags: 
   - "JavaScript"
   - "Vue"

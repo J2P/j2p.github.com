@@ -12,13 +12,12 @@ const Post = styled.article`
   flex-direction: column;
   margin-top: 3.5rem;
   margin-bottom: 3.5rem;
-  border: 1px solid #ccc;
-  border-radius: 25px;
   overflow: hidden;
-  border: 1px solid ${props => color[props.icon] || '#ccc'};
+  border-top: 1px solid ${props => color[props.icon] || '#ccc'};
+  // border-bottom: 1px solid ${props => color[props.icon] || '#ccc'};
 
   @media ${media.phone} {
-    border-radius: 35px;
+    // border-radius: 35px;
   }
 `;
 
