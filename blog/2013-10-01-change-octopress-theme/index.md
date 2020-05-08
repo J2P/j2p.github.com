@@ -4,7 +4,7 @@ date: "2013-10-01"
 layout: post
 draft: false
 path: "/posts/change-octopress-theme"
-category: "Blog"
+category: "dev.to"
 tags: 
   - "octopress"
 description: ""  

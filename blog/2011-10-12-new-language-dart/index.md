@@ -4,13 +4,11 @@ date: "2011-10-12"
 layout: post
 draft: false
 path: "/posts/new-language-dart"
-category: "Language"
+category: "Dart"
 tags: 
-  - "dart"
+  - "Dart"
 description: ""  
 ---
-
-![dart](./dart.jpg)
 
 Google 에서 새로운 언어 Dart 를 10 일 발표했나보다.
 써있는거 보면 구조화된 웹 애플리케이션 구축에 적합한 개발언어라고 한다.

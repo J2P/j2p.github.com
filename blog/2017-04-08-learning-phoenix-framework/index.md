@@ -4,7 +4,7 @@ date: "2017-04-08"
 layout: post
 draft: false
 path: "/posts/learning-phoenix-framework"
-category: "Language"
+category: "Elixir"
 tags: 
   - "elixir"
   - "phoenix"

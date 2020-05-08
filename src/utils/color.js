@@ -23,4 +23,8 @@ export const color = {
   Jest: '#C21325',
   Terraform: '#623CE4',
   Storybook: '#FF4785',
+  Dart: '#0175C2',
+  'Read the Docs': '#8CA1AF',
+  'dev.to': '#0A0A0A',
+  Elixir: '#4B275F',
 };

@@ -4,7 +4,7 @@ date: "2011-10-20"
 layout: post
 draft: false
 path: "/posts/book-programing-psychology"
-category: "Book"
+category: "Read the Docs"
 tags: 
   - "Book"
 description: ""  
