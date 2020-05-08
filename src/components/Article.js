@@ -9,20 +9,17 @@ import { color } from '../utils/color';
 
 const Post = styled.article`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin-top: 3.5rem;
   margin-bottom: 3.5rem;
   overflow: hidden;
   border-top: 1px solid ${props => color[props.icon] || '#ccc'};
-  // border-bottom: 1px solid ${props => color[props.icon] || '#ccc'};
-
-  @media ${media.phone} {
-    // border-radius: 35px;
-  }
 `;
 
 const Title = styled.h2`
-  text-align: center;
+  text-align: left;
+  padding: 1rem;
+  font-size: 1.6rem !important;
 
   @media ${media.phone} {
     font-size: 1.5rem !important;
@@ -39,6 +36,8 @@ const Initiale = styled.div`
 
   svg {
     fill: currentColor;
+    width: 100px;
+    height: 100px;
   }
 `;
 
@@ -78,19 +77,19 @@ const Article = ({ title, date, excerpt, slug, timeToRead, category }) => {
 
   return (
     <Post className={('article', className)} icon={className}>
-      <Title className="article-title">
-        <Initiale icon={className}>
-          {icon}
+      <Initiale icon={className}>{icon}</Initiale>
+      <div>
+        <Title className="article-title">
           <Link to={slug}>{title}</Link>
-        </Initiale>
-      </Title>
-      <Content>
-        <Subline>
-          {date} &mdash; {timeToRead} Min Read &mdash; In{' '}
-          <Link to={`/categories/${kebabCase(category)}`}>{category}</Link>
-        </Subline>
-        <Excerpt>{excerpt}</Excerpt>
-      </Content>
+        </Title>
+        <Content>
+          <Subline>
+            {date} &mdash; {timeToRead} Min Read &mdash; In{' '}
+            <Link to={`/categories/${kebabCase(category)}`}>{category}</Link>
+          </Subline>
+          <Excerpt>{excerpt}</Excerpt>
+        </Content>
+      </div>
     </Post>
   );
 };
