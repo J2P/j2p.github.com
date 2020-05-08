@@ -32,7 +32,7 @@
     "react-dom": "^16.10.2",
     "react-helmet": "^5.2.1",
     "react-typography": "^0.16.19",
-    "simple-icons": "^2.0.0",
+    "simple-icons": "^2.11.0",
     "styled-components": "^3.4.10",
     "typography": "^0.16.19"
   },
