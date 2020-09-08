@@ -72,11 +72,15 @@ const Contact = () => (
           <h3>(주) 당근마켓 <code className="language-text">2018.12.04 ~ </code></h3>
           <ul>
             <li>기존 웹뷰를 SPA 방식으로 전환하여 속도 향상, 반응성 개선</li>
+            <li>신고하기 개발</li>
             <li>사장님 메뉴 개발</li>
             <li>쿠폰 페이지 개발</li>
-            <li>업체 문의, 예약 페이지 개발</li>
-            <li>끌올 페이지 개발</li>
-            <li>Vue.js</li>
+            <li>동네업체 문의, 예약 페이지 개발</li>
+            <li>동네업체 가격 페이지 개발</li>
+            <li>끌어올리기 페이지 개발</li>
+            <li>동네업체 상세 페이지 리뉴얼</li>
+            <li>동네업체 어드민 개발</li>
+            <li>Vue.js, React.js, Next.js</li>
           </ul>
           <h3>ODK Media <code className="language-text">2018.4.23 ~ 2018.11.30</code></h3>
           <ul>
@@ -129,10 +133,19 @@ const Contact = () => (
             <h3>Deno Contributor</h3>
             <p>라이언달 발표를 보고 관심을 가지게 되어 간단한 PR을 보내기 시작 </p>
             <ul>
-              <li>2018.09.04 ~ 현재</li>
+              <li>2018.09.04 ~ 2019.12.31</li>
               <li>Rust, TypeScript</li>
               <li>deno.readDir, deno.readDirSync API 구현</li>
               <li><a href="https://github.com/denoland/deno">https://github.com/denoland/deno</a></li>
+            </ul>
+            <h3>Where is mask</h3>
+            <p>개인 프로젝트로</p>
+            <p>가족을 위해서 공적 마스크를 찾기 위한 서비스 제작</p>
+            <ul>
+              <li>2020.03.10 ~ 2020.03.14</li>
+              <li>React.js</li>
+              <li><a href="https://mask.j2p.dev" target="_blank">https://mask.j2p.dev</a></li>
+              <li><a href="https://github.com/J2P/where-is-mask">https://github.com/J2P/where-is-mask</a></li>
             </ul>
             <h3>Hanzai Game</h3>
             <p>개인 프로젝트로</p>
