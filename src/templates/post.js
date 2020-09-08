@@ -62,7 +62,7 @@ const PostTitle = styled.div`
     width: 200px;
 
     @media ${media.phone} {
-      width: 100px;
+      width: 50px;
     }
   }
 `;

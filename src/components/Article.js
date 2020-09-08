@@ -16,6 +16,10 @@ const Post = styled.article`
   border-top: 1px solid ${props => color[props.icon] || '#ccc'};
 `;
 
+const Contents = styled.div`
+  width: 100%;
+`;
+
 const Title = styled.h2`
   text-align: left;
   padding: 1rem;
@@ -38,6 +42,13 @@ const Initiale = styled.div`
     fill: currentColor;
     width: 100px;
     height: 100px;
+  }
+
+  @media ${media.phone} {
+    svg {
+      width: 50px;
+      height: 50px;
+    }
   }
 `;
 
@@ -78,7 +89,7 @@ const Article = ({ title, date, excerpt, slug, timeToRead, category }) => {
   return (
     <Post className={('article', className)} icon={className}>
       <Initiale icon={className}>{icon}</Initiale>
-      <div>
+      <Contents>
         <Title className="article-title">
           <Link to={slug}>{title}</Link>
         </Title>
@@ -89,7 +100,7 @@ const Article = ({ title, date, excerpt, slug, timeToRead, category }) => {
           </Subline>
           <Excerpt>{excerpt}</Excerpt>
         </Content>
-      </div>
+      </Contents>
     </Post>
   );
 };
