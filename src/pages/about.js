@@ -139,7 +139,7 @@ const Contact = () => (
               <li><a href="https://github.com/denoland/deno">https://github.com/denoland/deno</a></li>
             </ul>
             <h3>Where is mask</h3>
-            <p>개인 프로젝트로</p>
+            <p>개인 프로젝트</p>
             <p>가족을 위해서 공적 마스크를 찾기 위한 서비스 제작</p>
             <ul>
               <li>2020.03.10 ~ 2020.03.14</li>
@@ -148,14 +148,15 @@ const Contact = () => (
               <li><a href="https://github.com/J2P/where-is-mask">https://github.com/J2P/where-is-mask</a></li>
             </ul>
             <h3>Hanzai Game</h3>
-            <p>개인 프로젝트로</p>
+            <p>개인 프로젝트</p>
             <p>아이의 한자시험 공부를 도와주기 위해서 한자 공부용 게임 제작(한자 4급)</p>
             <ul>
               <li>React.js</li>
+              <li><a href="https://hanja.j2p.dev" target="_blank">https://hanja.j2p.dev</a></li>
               <li><a href="https://github.com/J2P/play-hanzai">https://github.com/J2P/play-hanzai</a></li>
             </ul>
             <h3>React Bingo Game</h3>
-            <p>개인 프로젝트로</p>
+            <p>개인 프로젝트</p>
             <p>아이들이 종이에 빙고 판을 그리고 게임을 하는것에서 아이디어를 얻어서 개인 프로젝트로 제작</p>
             <ul>
               <li>Node.js, Express, React.js, Socket.io</li>
