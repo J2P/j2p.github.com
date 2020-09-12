@@ -14,7 +14,8 @@ const Post = styled.article`
   margin-top: 3.5rem;
   margin-bottom: 3.5rem;
   overflow: hidden;
-  border-top: 1px solid ${props => color[props.icon] || '#ccc'};
+  border: 1px solid ${props => color[props.icon] || '#ccc'};
+  border-radius: 8px
 `;
 
 const Contents = styled.div`
@@ -73,9 +74,16 @@ const Content = styled.div`
   padding: 0 1rem;
 `;
 
+
+const Category = styled.p`
+  color: #FFFFFF;
+  font-size: 12px;
+  text-align: center;
+`;
+
 const Article = ({ title, date, excerpt, slug, timeToRead, category }) => {
   const className = getClassName(category);
-  
+
   const icon = simpleIcons[category] ? (
     <PostTitle className={className} icon={className} dangerouslySetInnerHTML={{ __html: simpleIcons[category].svg }} />
   ) : (
@@ -84,7 +92,7 @@ const Article = ({ title, date, excerpt, slug, timeToRead, category }) => {
 
   return (
     <Post className={('article', className)} icon={className}>
-      <Initiale icon={className}>{icon}</Initiale>
+      <Initiale icon={className}>{icon}<Category>{category}</Category></Initiale>
       <Contents>
         <Title className="article-title">
           <Link to={slug}>{title}</Link>
