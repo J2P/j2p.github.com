@@ -6,6 +6,7 @@ import simpleIcons from 'simple-icons';
 import Subline from './Subline';
 import { media } from '../utils/media';
 import { color } from '../utils/color';
+import { getClassName } from '../utils';
 
 const Post = styled.article`
   display: flex;
@@ -73,13 +74,8 @@ const Content = styled.div`
 `;
 
 const Article = ({ title, date, excerpt, slug, timeToRead, category }) => {
-  let className = category;
-  if (category === 'Node.js' || category === 'Vue.js') {
-    className = category.replace('.js', '');
-  }
-  if (category === 'Visual Studio Code') {
-    className = category.replace(/ /gi, '');
-  }
+  const className = getClassName(category);
+  
   const icon = simpleIcons[category] ? (
     <PostTitle className={className} icon={className} dangerouslySetInnerHTML={{ __html: simpleIcons[category].svg }} />
   ) : (

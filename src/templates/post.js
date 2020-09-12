@@ -11,6 +11,7 @@ import Header from '../components/Header';
 import Subline from '../components/Subline';
 import { media } from '../utils/media';
 import { color } from '../utils/color';
+import { getClassName } from '../utils'
 
 import config from '../../config/SiteConfig';
 import '../utils/prismjs-theme.css';
@@ -72,13 +73,7 @@ const Post = props => {
   const postNode = props.data.markdownRemark;
   const post = postNode.frontmatter;
   const { category } = post;
-  let className = post.category;
-  if (category === 'Node.js' || category === 'Vue.js') {
-    className = category.replace('.js', '');
-  }
-  if (category === 'Visual Studio Code') {
-    className = category.replace(/ /gi, '');
-  }
+  const className = getClassName(post.category);
 
   const icon = simpleIcons[category] ? (
     <PostTitle className={className} icon={className} dangerouslySetInnerHTML={{ __html: simpleIcons[category].svg }} />
