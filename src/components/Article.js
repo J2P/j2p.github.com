@@ -14,8 +14,13 @@ const Post = styled.article`
   margin-top: 3.5rem;
   margin-bottom: 3.5rem;
   overflow: hidden;
-  border: 1px solid ${props => color[props.icon] || '#ccc'};
-  border-radius: 8px
+  border-radius: 8px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+  height: 300px;
+
+  @media ${media.phone} {
+    height: auto;
+  }
 `;
 
 const Contents = styled.div`
@@ -28,7 +33,7 @@ const Title = styled.h2`
   font-size: 1.6rem !important;
 
   @media ${media.phone} {
-    font-size: 1.5rem !important;
+    font-size: 1.2rem !important;
   }
 `;
 
@@ -74,9 +79,8 @@ const Content = styled.div`
   padding: 0 1rem;
 `;
 
-
 const Category = styled.p`
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 12px;
   text-align: center;
 `;
@@ -92,7 +96,10 @@ const Article = ({ title, date, excerpt, slug, timeToRead, category }) => {
 
   return (
     <Post className={('article', className)} icon={className}>
-      <Initiale icon={className}>{icon}<Category>{category}</Category></Initiale>
+      <Initiale icon={className}>
+        {icon}
+        <Category>{category}</Category>
+      </Initiale>
       <Contents>
         <Title className="article-title">
           <Link to={slug}>{title}</Link>

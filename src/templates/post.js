@@ -11,7 +11,7 @@ import Header from '../components/Header';
 import Subline from '../components/Subline';
 import { media } from '../utils/media';
 import { color } from '../utils/color';
-import { getClassName } from '../utils'
+import { getClassName } from '../utils';
 
 import config from '../../config/SiteConfig';
 import '../utils/prismjs-theme.css';
