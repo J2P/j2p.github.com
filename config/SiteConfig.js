@@ -9,8 +9,8 @@ module.exports = {
   siteDescription: '',
 
   siteFBAppID: '123456789', // Facebook App ID
-  userTwitter: '@minimal', // Twitter Username
-  ogSiteName: 'minimal', // Facebook Site Name
+  userTwitter: '@J2P_', // Twitter Username
+  ogSiteName: 'J2P Blog', // Facebook Site Name
 
   // Manifest and Progress color
   themeColor: '#3498DB',

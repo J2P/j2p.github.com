@@ -67,7 +67,7 @@ const SEO = props => {
     <Helmet>
       <title>{config.siteTitle}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content="minimal, blog, layout" />
+      <meta name="keywords" content="blog" />
       <meta name="image" content={image} />
       <script type="application/ld+json">{JSON.stringify(schemaOrgJSONLD)}</script>
       <meta property="og:locale" content="de_DE" />

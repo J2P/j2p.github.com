@@ -3,7 +3,7 @@ import Typography from 'typography';
 const config = require('../../config/SiteConfig');
 
 const typography = new Typography({
-  title: 'Minimal',
+  title: 'J2P Blog',
   baseFontSize: config.baseFontSize,
   baseLineHeight: 1.66,
   scaleRatio: 3.157,
