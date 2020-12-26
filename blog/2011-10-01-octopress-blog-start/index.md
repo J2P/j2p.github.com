@@ -4,7 +4,7 @@ date: "2011-10-01"
 layout: post
 draft: false
 path: "/posts/octopress-blog-start"
-category: "dev.to"
+category: "dev"
 tags: 
   - "octopress"
 description: ""  

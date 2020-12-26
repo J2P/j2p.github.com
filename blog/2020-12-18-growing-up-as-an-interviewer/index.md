@@ -4,7 +4,7 @@ date: "2020-12-18"
 layout: post
 draft: false
 path: "/posts/growing-up-as-an-interviewer"
-category: "dev.to"
+category: "dev"
 tags: 
 description: ""  
 ---

@@ -4,7 +4,7 @@ date: "2015-04-24"
 layout: post
 draft: false
 path: "/posts/cocos2d-x-portrait-mode"
-category: "dev.to"
+category: "dev"
 tags: 
   - "cocos2d-x"
 description: ""  

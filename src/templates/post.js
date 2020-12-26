@@ -11,7 +11,7 @@ import Header from '../components/Header';
 import Subline from '../components/Subline';
 import { media } from '../utils/media';
 import { color } from '../utils/color';
-import { getClassName } from '../utils';
+import { getClassName, getIconCategory } from '../utils';
 
 import config from '../../config/SiteConfig';
 import '../utils/prismjs-theme.css';
@@ -73,13 +73,8 @@ const Post = props => {
   const postNode = props.data.markdownRemark;
   const post = postNode.frontmatter;
   const { category } = post;
-  const className = getClassName(post.category);
-
-  const icon = simpleIcons[category] ? (
-    <PostTitle className={className} icon={className} dangerouslySetInnerHTML={{ __html: simpleIcons[category].svg }} />
-  ) : (
-    ''
-  );
+  const className = getClassName(category);
+  const iconCategory = getIconCategory(category);
 
   return (
     <Layout>
@@ -93,9 +88,13 @@ const Post = props => {
           <Title>{post.title}</Title>
           <Subline>
             {post.date} &mdash; {postNode.timeToRead} Min Read &mdash; In{' '}
-            <Link to={`/categories/${kebabCase(post.category)}`}>{post.category}</Link>
+            <Link to={`/categories/${kebabCase(iconCategory)}`}>{iconCategory}</Link>
           </Subline>
-          {icon}
+          <PostTitle
+            className={className}
+            icon={className}
+            dangerouslySetInnerHTML={{ __html: simpleIcons[iconCategory].svg }}
+          />
           <PostContent dangerouslySetInnerHTML={{ __html: postNode.html }} />
         </Content>
       </Wrapper>

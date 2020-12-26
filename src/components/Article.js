@@ -6,7 +6,7 @@ import simpleIcons from 'simple-icons';
 import Subline from './Subline';
 import { media } from '../utils/media';
 import { color } from '../utils/color';
-import { getClassName } from '../utils';
+import { getClassName, getIconCategory } from '../utils';
 
 const Post = styled.article`
   display: flex;
@@ -87,17 +87,16 @@ const Category = styled.p`
 
 const Article = ({ title, date, excerpt, slug, timeToRead, category }) => {
   const className = getClassName(category);
-
-  const icon = simpleIcons[category] ? (
-    <PostTitle className={className} icon={className} dangerouslySetInnerHTML={{ __html: simpleIcons[category].svg }} />
-  ) : (
-    ''
-  );
+  const iconCategory = getIconCategory(category);
 
   return (
     <Post className={('article', className)} icon={className}>
       <Initiale icon={className}>
-        {icon}
+        <PostTitle
+          className={className}
+          icon={className}
+          dangerouslySetInnerHTML={{ __html: simpleIcons[iconCategory].svg }}
+        />
         <Category>{category}</Category>
       </Initiale>
       <Contents>

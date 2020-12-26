@@ -4,7 +4,7 @@ date: "2013-10-19"
 layout: post
 draft: false
 path: "/posts/do-a-drawing"
-category: "dev.to"
+category: "dev"
 tags: 
   - "drawing"
 description: ""  

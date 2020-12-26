@@ -4,7 +4,7 @@ date: "2017-12-31"
 layout: post
 draft: false
 path: "/posts/2017-postmortem"
-category: "dev.to"
+category: "dev"
 tags: 
   - "postmortem"
 description: ""  
